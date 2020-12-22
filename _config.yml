@@ -29,7 +29,7 @@ comments:
   facebook:
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : # "dark" (default), "light"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -80,15 +80,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  name             : "Pavlo Lutsik"
+  avatar           : "compepigen.png"
+  bio              : "Group Leader at DKFZ"
+  location         : "Heidelberg, Germany"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=%28Lutsik+P%5BAuthor%5D+AND+German+Cancer+Research+Center%5BAffiliation%5D%29+OR+%28Assenov+Y%5BAuthor%5D+AND+German+Cancer+Research+Center%5BAffiliation%5D%29+OR+%28Toth+R%5BAuthor%5D+AND+German+Cancer+Research+Center%5BAffiliation%5D%29&cmd=DetailsSearch"
+  googlescholar    : "https://scholar.google.com/citations?user=PB9nc_0AAAAJ&hl=en&oi=ao"
   email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :
   uri              :
   bitbucket        :
   codepen          :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "pavlo_lutsik"
   vine             :
   weibo            :
   xing             :

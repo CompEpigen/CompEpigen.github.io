@@ -29,7 +29,7 @@ comments:
   facebook:
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "dark" (default), "light"
+    colorscheme          : # "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Pavlo Lutsik"
+  name             : "CompEpigen"
   avatar           : "compepigen.png"
-  bio              : "Group Leader at DKFZ"
+  bio              : "Group at DKFZ working on Epigenomics"
   location         : "Heidelberg, Germany"
   employer         :
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=%28Lutsik+P%5BAuthor%5D+AND+German+Cancer+Research+Center%5BAffiliation%5D%29+OR+%28Assenov+Y%5BAuthor%5D+AND+German+Cancer+Research+Center%5BAffiliation%5D%29+OR+%28Toth+R%5BAuthor%5D+AND+German+Cancer+Research+Center%5BAffiliation%5D%29&cmd=DetailsSearch"

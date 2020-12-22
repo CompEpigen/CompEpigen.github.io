@@ -1,15 +1,13 @@
 ---
-title: "Paper Title Number 1"
+title: "Methrix: an R/bioconductor package for systematic aggregation and analysis of bisulfite sequencing data"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+permalink: https://doi.org/10.1093/bioinformatics/btaa1048
+excerpt: 'methrix is an R package, which provides a toolset for systematic analysis of large datasets.'
 date: 2009-10-01
 venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+paperurl: 'https://doi.org/10.1093/bioinformatics/btaa1048'
+citation: 'Anand Mayakonda, Maximilian Schönung, Joschka Hey, Rajbir Nath Batra, Clarissa Feuerstein-Akgoz, Kristin Köhler, Daniel B Lipka, Rocio Sotillo, Christoph Plass, Pavlo Lutsik, Reka Toth, Methrix: an R/bioconductor package for systematic aggregation and analysis of bisulfite sequencing data, Bioinformatics'
 ---
-This paper is about the number 1. The number 2 is left for future work.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+[Download paper here](https://watermark.silverchair.com/btaa1048.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAwkwggMFBgkqhkiG9w0BBwagggL2MIIC8gIBADCCAusGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMQ87wLzEJVl9XfmGoAgEQgIICvP5xyILaSmoX0RtBy88PsXZ8LJEPce5TtvunT5tvBrT2NzSdJdboe8TEnVo78yVIFBr0k7hSJOs3qMnQV_etmTYOno7LNTeTJSNMZodmcT2xdUVeQivBluXBsmhvXufGaKksrOWyCIcbdJIAOjsbSTqylaMd-dbuHGhhaZ7qqB_F6A_FkIrRLjVCW2OpBDgOMZXIBvYMhqFRB7mN7e6eoK3huHRh7pDgUb-TYX507DqRoETgC2_X8qRn6LTfV32bnccyhpEto-3GkEDQVlWR-AMO8PtPaqJQIqzLqqnz8Z18i-18goRc14EeLh9T-vEldgh3urZAjL2SbWRyjy2S4YGHW21gKRHMVwnROuX6opIGQOCElk1skipJNgpnA00iHNQxJ1sEVI1yN3Ex-zfRxmA_Wj0mWgZEqfhG8Gw24OSRke5qSJ8flj1uHl9Xv4ZUYSWBncxNRGiGja2d1HHkeqLYZDRq1YMr7_BfX1Z5hy6tT4LZzPHwWZbSs7kKGvBAnHk5srWCGGETX_bKqRTzz4r0rBUUn0bWGUT2zcSuu3fslntLBZszF81FzMuCGSPhoZJ4igecRSQh6qakfqCNTu3VsfqNXmF29HZgNpVY0M9Kap8E1rFGD-svs4M8O3N20gAgBNMUOpEIFhvBlXEjTD2TjPIAlHKz4I2_9buJbEYRdf_dzW81Eg0Dt1PfaWH8vGEgTdB39NYTH0eiGB8IjwTt5K2H_3vSa6jC6IiSzx1JVP9Dqio7MlfMkzdUkFMA7NQAhy1j18FM8m4__LX0YpsMzAj0Nr-xtXzs9ZZ0tJC1LxcX6HK48gFOFEl9p19cAgdxkm3EeuxWwlxbN4eju2unzAruk2JDQm8pcd9r5-kjXRktqFnyDGpJjVMlI7EmDze-SzNJoYCTNfrLL0JJnKRkRvFLFNBSjkWMbuo)

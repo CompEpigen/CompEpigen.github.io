@@ -11,11 +11,19 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            display: grid;
+            grid-template-areas: 
+                "nav nav nav"
+                "research research team"
+                "publications funding funding";
+            grid-gap: 20px;
+            padding: 20px;
         }
         nav {
+            grid-area: nav;
             background: #333;
             color: #fff;
-            padding: 1em 0;
+            padding: 1em;
             text-align: center;
         }
         nav a {
@@ -24,25 +32,40 @@
             margin: 0 15px;
         }
         section {
-            padding: 2em 0;
-            text-align: center;
+            padding: 1em;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
+        .research {
+            grid-area: research;
+        }
+        .team {
+            grid-area: team;
+        }
+        .publications {
+            grid-area: publications;
+        }
+        .funding {
+            grid-area: funding;
         }
         h2 {
-            margin-bottom: 1em;
-        }
-        .team img, .publications img, .funding img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            margin-bottom: 0.5em;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2em;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1em;
+        }
+        .team img, .publications img, .funding img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .item {
+            background: #fff;
+            padding: 1em;
+            border: 1px solid #ddd;
+            text-align: center;
         }
     </style>
 </head>
@@ -54,88 +77,80 @@
         <a href="#funding">Funding</a>
     </nav>
 
-    <section id="research">
-        <div class="container">
-            <h2>Research Topics</h2>
-            <div class="grid">
-                <div>
-                    <h3>Topic 1</h3>
-                    <p>Description of research topic 1.</p>
-                </div>
-                <div>
-                    <h3>Topic 2</h3>
-                    <p>Description of research topic 2.</p>
-                </div>
-                <div>
-                    <h3>Topic 3</h3>
-                    <p>Description of research topic 3.</p>
-                </div>
+    <section id="research" class="research">
+        <h2>Research Topics</h2>
+        <div class="grid">
+            <div class="item">
+                <h3>Topic 1</h3>
+                <p>Brief description of research topic 1.</p>
+            </div>
+            <div class="item">
+                <h3>Topic 2</h3>
+                <p>Brief description of research topic 2.</p>
+            </div>
+            <div class="item">
+                <h3>Topic 3</h3>
+                <p>Brief description of research topic 3.</p>
             </div>
         </div>
     </section>
 
-    <section id="team">
-        <div class="container">
-            <h2>Team</h2>
-            <div class="grid">
-                <div>
-                    <img src="team_member_1.jpg" alt="Team Member 1">
-                    <h3>Team Member 1</h3>
-                    <p>Position</p>
-                </div>
-                <div>
-                    <img src="team_member_2.jpg" alt="Team Member 2">
-                    <h3>Team Member 2</h3>
-                    <p>Position</p>
-                </div>
-                <div>
-                    <img src="team_member_3.jpg" alt="Team Member 3">
-                    <h3>Team Member 3</h3>
-                    <p>Position</p>
-                </div>
+    <section id="team" class="team">
+        <h2>Team</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="team_member_1.jpg" alt="Team Member 1">
+                <h3>Member 1</h3>
+                <p>Position</p>
+            </div>
+            <div class="item">
+                <img src="team_member_2.jpg" alt="Team Member 2">
+                <h3>Member 2</h3>
+                <p>Position</p>
+            </div>
+            <div class="item">
+                <img src="team_member_3.jpg" alt="Team Member 3">
+                <h3>Member 3</h3>
+                <p>Position</p>
             </div>
         </div>
     </section>
 
-    <section id="publications">
-        <div class="container">
-            <h2>Publications</h2>
-            <div class="grid">
-                <div>
-                    <h3>Publication 1</h3>
-                    <p>Details of publication 1.</p>
-                </div>
-                <div>
-                    <h3>Publication 2</h3>
-                    <p>Details of publication 2.</p>
-                </div>
-                <div>
-                    <h3>Publication 3</h3>
-                    <p>Details of publication 3.</p>
-                </div>
+    <section id="publications" class="publications">
+        <h2>Publications</h2>
+        <div class="grid">
+            <div class="item">
+                <h3>Publication 1</h3>
+                <p>Details of publication 1.</p>
+            </div>
+            <div class="item">
+                <h3>Publication 2</h3>
+                <p>Details of publication 2.</p>
+            </div>
+            <div class="item">
+                <h3>Publication 3</h3>
+                <p>Details of publication 3.</p>
             </div>
         </div>
     </section>
 
-    <section id="funding">
-        <div class="container">
-            <h2>Funding</h2>
-            <div class="grid">
-                <div>
-                    <img src="funding_source_1.jpg" alt="Funding Source 1">
-                    <h3>Funding Source 1</h3>
-                    <p>Details about the funding source.</p>
-                </div>
-                <div>
-                    <img src="funding_source_2.jpg" alt="Funding Source 2">
-                    <h3>Funding Source 2</h3>
-                    <p>Details about the funding source.</p>
-                </div>
-                <div>
-                    <img src="funding_source_3.jpg" alt="Funding Source 3">
-                    <h3>Funding Source 3</h3>
-                    <p>Details about the funding source.</p>
-                </div>
+    <section id="funding" class="funding">
+        <h2>Funding</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="funding_source_1.jpg" alt="Funding Source 1">
+                <h3>Funding Source 1</h3>
+                <p>Details about the funding source.</p>
+            </div>
+            <div class="item">
+                <img src="funding_source_2.jpg" alt="Funding Source 2">
+                <h3>Funding Source 2</h3>
+                <p>Details about the funding source.</p>
+            </div>
+            <div class="item">
+                <img src="funding_source_3.jpg" alt="Funding Source 3">
+                <h3>Funding Source 3</h3>
+                <p>Details about the funding source.</p>
             </div>
         </div>
     </section>

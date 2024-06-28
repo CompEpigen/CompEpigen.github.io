@@ -12,20 +12,32 @@
             padding: 0;
             display: grid;
             grid-template-areas: 
+                "logo logo logo"
                 "research team publications"
                 "software funding other";
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr;
             gap: 20px;
             height: 100vh;
             padding: 20px;
             box-sizing: border-box;
+            background: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
+        }
+        .logo {
+            grid-area: logo;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        .logo img {
+            height: 80px;
+            margin-right: 20px;
         }
         section {
             padding: 1em;
-            background: #f4f4f4;
             border: 1px solid #ddd;
-            overflow: auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
         }
         .research {
             grid-area: research;
@@ -48,140 +60,80 @@
         h2 {
             margin-bottom: 0.5em;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 1em;
+        ul {
+            list-style: none;
+            padding: 0;
         }
-        .team img, .publications img, .funding img, .software img, .other img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-        .item {
+        li {
             background: #fff;
-            padding: 1em;
+            padding: 10px;
+            margin-bottom: 10px;
             border: 1px solid #ddd;
-            text-align: center;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="logo.png" alt="Lab Logo">
+        <div>
+            <h1>Scientific Lab</h1>
+            <p>Contact: info@scientificlab.com</p>
+        </div>
+    </div>
+
     <section id="research" class="research">
         <h2>Research Topics</h2>
-        <div class="grid">
-            <div class="item">
-                <h3>Topic 1</h3>
-                <p>Brief description of research topic 1.</p>
-            </div>
-            <div class="item">
-                <h3>Topic 2</h3>
-                <p>Brief description of research topic 2.</p>
-            </div>
-            <div class="item">
-                <h3>Topic 3</h3>
-                <p>Brief description of research topic 3.</p>
-            </div>
-        </div>
+        <ul>
+            <li>Topic 1: Brief description of research topic 1.</li>
+            <li>Topic 2: Brief description of research topic 2.</li>
+            <li>Topic 3: Brief description of research topic 3.</li>
+        </ul>
     </section>
 
     <section id="team" class="team">
         <h2>Team</h2>
-        <div class="grid">
-            <div class="item">
-                <img src="team_member_1.jpg" alt="Team Member 1">
-                <h3>Member 1</h3>
-                <p>Position</p>
-            </div>
-            <div class="item">
-                <img src="team_member_2.jpg" alt="Team Member 2">
-                <h3>Member 2</h3>
-                <p>Position</p>
-            </div>
-            <div class="item">
-                <img src="team_member_3.jpg" alt="Team Member 3">
-                <h3>Member 3</h3>
-                <p>Position</p>
-            </div>
-        </div>
+        <ul>
+            <li>Member 1: Position</li>
+            <li>Member 2: Position</li>
+            <li>Member 3: Position</li>
+        </ul>
     </section>
 
     <section id="publications" class="publications">
         <h2>Publications</h2>
-        <div class="grid">
-            <div class="item">
-                <h3>Publication 1</h3>
-                <p>Details of publication 1.</p>
-            </div>
-            <div class="item">
-                <h3>Publication 2</h3>
-                <p>Details of publication 2.</p>
-            </div>
-            <div class="item">
-                <h3>Publication 3</h3>
-                <p>Details of publication 3.</p>
-            </div>
-        </div>
+        <ul>
+            <li>Publication 1: Details of publication 1.</li>
+            <li>Publication 2: Details of publication 2.</li>
+            <li>Publication 3: Details of publication 3.</li>
+        </ul>
     </section>
 
     <section id="software" class="software">
         <h2>Software</h2>
-        <div class="grid">
-            <div class="item">
-                <img src="software_1.jpg" alt="Software 1">
-                <h3>Software 1</h3>
-                <p>Details about the software.</p>
-            </div>
-            <div class="item">
-                <img src="software_2.jpg" alt="Software 2">
-                <h3>Software 2</h3>
-                <p>Details about the software.</p>
-            </div>
-            <div class="item">
-                <img src="software_3.jpg" alt="Software 3">
-                <h3>Software 3</h3>
-                <p>Details about the software.</p>
-            </div>
-        </div>
+        <ul>
+            <li>Software 1: Details about the software.</li>
+            <li>Software 2: Details about the software.</li>
+            <li>Software 3: Details about the software.</li>
+        </ul>
     </section>
 
     <section id="funding" class="funding">
         <h2>Funding</h2>
-        <div class="grid">
-            <div class="item">
-                <img src="funding_source_1.jpg" alt="Funding Source 1">
-                <h3>Funding Source 1</h3>
-                <p>Details about the funding source.</p>
-            </div>
-            <div class="item">
-                <img src="funding_source_2.jpg" alt="Funding Source 2">
-                <h3>Funding Source 2</h3>
-                <p>Details about the funding source.</p>
-            </div>
-            <div class="item">
-                <img src="funding_source_3.jpg" alt="Funding Source 3">
-                <h3>Funding Source 3</h3>
-                <p>Details about the funding source.</p>
-            </div>
-        </div>
+        <ul>
+            <li>Funding Source 1: Details about the funding source.</li>
+            <li>Funding Source 2: Details about the funding source.</li>
+            <li>Funding Source 3: Details about the funding source.</li>
+        </ul>
     </section>
 
     <section id="other" class="other">
         <h2>Other Section</h2>
-        <div class="grid">
-            <div class="item">
-                <h3>Other Item 1</h3>
-                <p>Details of other item 1.</p>
-            </div>
-            <div class="item">
-                <h3>Other Item 2</h3>
-                <p>Details of other item 2.</p>
-            </div>
-            <div class="item">
-                <h3>Other Item 3</h3>
-                <p>Details of other item 3.</p>
-            </div>
-        </div>
+        <ul>
+            <li>Other Item 1: Details of other item 1.</li>
+            <li>Other Item 2: Details of other item 2.</li>
+            <li>Other Item 3: Details of other item 3.</li>
+        </ul>
     </section>
 </body>
 </html>

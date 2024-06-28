@@ -10,31 +10,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
             display: grid;
             grid-template-areas: 
-                "nav nav nav"
-                "research research team"
-                "publications funding funding";
-            grid-gap: 20px;
+                "research team publications"
+                "software funding other";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            height: 100vh;
             padding: 20px;
-        }
-        nav {
-            grid-area: nav;
-            background: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
+            box-sizing: border-box;
         }
         section {
             padding: 1em;
             background: #f4f4f4;
             border: 1px solid #ddd;
+            overflow: auto;
         }
         .research {
             grid-area: research;
@@ -45,8 +36,14 @@
         .publications {
             grid-area: publications;
         }
+        .software {
+            grid-area: software;
+        }
         .funding {
             grid-area: funding;
+        }
+        .other {
+            grid-area: other;
         }
         h2 {
             margin-bottom: 0.5em;
@@ -56,7 +53,7 @@
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 1em;
         }
-        .team img, .publications img, .funding img {
+        .team img, .publications img, .funding img, .software img, .other img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -70,13 +67,6 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#research">Research Topics</a>
-        <a href="#team">Team</a>
-        <a href="#publications">Publications</a>
-        <a href="#funding">Funding</a>
-    </nav>
-
     <section id="research" class="research">
         <h2>Research Topics</h2>
         <div class="grid">
@@ -134,6 +124,27 @@
         </div>
     </section>
 
+    <section id="software" class="software">
+        <h2>Software</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="software_1.jpg" alt="Software 1">
+                <h3>Software 1</h3>
+                <p>Details about the software.</p>
+            </div>
+            <div class="item">
+                <img src="software_2.jpg" alt="Software 2">
+                <h3>Software 2</h3>
+                <p>Details about the software.</p>
+            </div>
+            <div class="item">
+                <img src="software_3.jpg" alt="Software 3">
+                <h3>Software 3</h3>
+                <p>Details about the software.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="funding" class="funding">
         <h2>Funding</h2>
         <div class="grid">
@@ -151,6 +162,24 @@
                 <img src="funding_source_3.jpg" alt="Funding Source 3">
                 <h3>Funding Source 3</h3>
                 <p>Details about the funding source.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="other" class="other">
+        <h2>Other Section</h2>
+        <div class="grid">
+            <div class="item">
+                <h3>Other Item 1</h3>
+                <p>Details of other item 1.</p>
+            </div>
+            <div class="item">
+                <h3>Other Item 2</h3>
+                <p>Details of other item 2.</p>
+            </div>
+            <div class="item">
+                <h3>Other Item 3</h3>
+                <p>Details of other item 3.</p>
             </div>
         </div>
     </section>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computational Cancer Biology & Epigenomics Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero {
+      background: url('https://compepigen.github.io/images/lab.jpg') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div><strong>Compepigen Lab</strong></div>
+      <div>
+        <a href="#research">Research</a>
+        <a href="#team">Team</a>
+        <a href="#software">Software</a>
+        <a href="#publications">Publications</a>
+        <a href="#positions">Positions</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Computational Cancer Biology & Epigenomics</h1>
+  </div>
+
+  <section id="research">
+    <h2>Research Focus</h2>
+    <div class="card-grid">
+      <div class="card">Methylome Deconvolution</div>
+      <div class="card">Cancer Cell-of-Origin Inference</div>
+      <div class="card">Single-Cell and Spatial Epigenomics</div>
+      <div class="card">Oncohistone Malignancies</div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <p>Team members from KU Leuven and DKFZ. Photos and links can be added here.</p>
+  </section>
+
+  <section id="software">
+    <h2>Software Tools</h2>
+    <div class="card-grid">
+      <div class="card">MeDeCom, MethylBERT</div>
+      <div class="card">RnBeads, methrix, AmpliconDesign</div>
+      <div class="card">scMAUI, epiCHAOS</div>
+      <div class="card">workflUX, figeno</div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a></li>
+      <li><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></li>
+      <li><a href="https://lirias.kuleuven.be/" target="_blank">KU Leuven Lirias</a></li>
+    </ul>
+  </section>
+
+  <section id="positions">
+    <h2>Open Positions</h2>
+    <p>PhD Student in Single-Cell Multiomics of Skeletal Stem Cells – [Apply Link]</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Department of Oncology<br />KU Leuven<br />Herestraat 49<br />3001 Leuven<br />Email: pavlo.lutsik@kuleuven.be</p>
+  </section>
+
+  <footer>
+    <p>Affiliated with KU Leuven and German Cancer Research Center (DKFZ)</p>
+  </footer>
+</body>
+
+</html>

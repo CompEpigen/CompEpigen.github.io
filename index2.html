@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computational Cancer Biology & Epigenomics Lab</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,10 +14,15 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Lato', sans-serif;
       line-height: 1.6;
       background-color: #f9f9f9;
-      color: #222;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #0056b3;
     }
 
     header {
@@ -76,6 +81,17 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    .separator {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .separator::before {
+      content: '❧ ❧ ❧';
+      font-size: 1.5em;
+      color: #bbb;
+    }
+
     footer {
       background-color: #003366;
       color: white;
@@ -121,20 +137,38 @@
     </div>
   </section>
 
+  <div class="separator"></div>
+
   <section id="team">
     <h2>Our Team</h2>
-    <p>Team members from KU Leuven and DKFZ. Photos and links can be added here.</p>
+    <ul>
+      <li>Pavlo Lutsik – Principal Investigator</li>
+      <li>Sergii Mamedov – PhD Student</li>
+      <li>Shih-Ting Chiu – PhD Student</li>
+      <li>Yichen Meng – PhD Student</li>
+      <li>Sheng-Yang Hsiao – PhD Student</li>
+      <li>Florian Gruber – Collaborator</li>
+    </ul>
   </section>
+
+  <div class="separator"></div>
 
   <section id="software">
     <h2>Software Tools</h2>
     <div class="card-grid">
-      <div class="card">MeDeCom, MethylBERT</div>
-      <div class="card">RnBeads, methrix, AmpliconDesign</div>
-      <div class="card">scMAUI, epiCHAOS</div>
-      <div class="card">workflUX, figeno</div>
+      <div class="card">MeDeCom</div>
+      <div class="card">MethylBERT</div>
+      <div class="card">RnBeads</div>
+      <div class="card">methrix</div>
+      <div class="card">AmpliconDesign</div>
+      <div class="card">scMAUI</div>
+      <div class="card">epiCHAOS</div>
+      <div class="card">workflUX</div>
+      <div class="card">figeno</div>
     </div>
   </section>
+
+  <div class="separator"></div>
 
   <section id="publications">
     <h2>Publications</h2>
@@ -145,10 +179,14 @@
     </ul>
   </section>
 
+  <div class="separator"></div>
+
   <section id="positions">
     <h2>Open Positions</h2>
-    <p>PhD Student in Single-Cell Multiomics of Skeletal Stem Cells – [Apply Link]</p>
+    <p>PhD Student in Single-Cell Multiomics of Skeletal Stem Cells – <a href="mailto:pavlo.lutsik@kuleuven.be">Apply via email</a></p>
   </section>
+
+  <div class="separator"></div>
 
   <section id="contact">
     <h2>Contact</h2>

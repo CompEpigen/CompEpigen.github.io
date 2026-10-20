@@ -181,3 +181,11 @@ body:has(#filter-led:checked) .year-block:not(:has(.pub[data-led])) { display: n
   color: var(--color-accent-700);
 }
 .tool-icon .icon { width: 22px; height: 22px; }
+.grid-4 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+.card-head .card-title { margin: 0; }
+.alumni-group + .alumni-group { margin-top: 36px; }
+.alumni-group h3 {
+  font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--color-accent-700); margin: 0 0 8px;
+}
+.alumni td:not(:first-child):not(:last-child) { color: var(--color-neutral-800); }

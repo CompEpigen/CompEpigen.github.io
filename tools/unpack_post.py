@@ -41,6 +41,7 @@ def header_html(prefix):
       </a>
       <div class="site-nav">
         <a href="{prefix}">Home</a>
+        <a href="{prefix}software/">Software</a>
         <a href="{prefix}publications/">Publications</a>
         <a href="{prefix}team/">Team</a>
         <a href="{prefix}blog/" aria-current="page">Blog</a>
@@ -159,6 +160,12 @@ def main():
                            head_html(prefix, a.title, a.description, a.image))
     template = insert_once(template, "<body>\n", header_html(prefix))
     template = template.replace("<html>", '<html lang="en">', 1)
+    # Center the post in the same 1240px column as the other pages (the export pins it to the left edge).
+    template = template.replace(
+        "max-width: 1240px; margin: 0; background: var(--color-bg); padding: clamp(28px, 5vw, 72px) "
+        "clamp(20px, 5vw, 64px) 120px clamp(20px, 7vw, 120px);",
+        "max-width: 1240px; margin: 0 auto; background: var(--color-bg); padding: clamp(28px, 5vw, 72px) "
+        "clamp(16px, 5vw, 64px) 120px;", 1)
 
     (out_dir / "index.html").write_text(template, encoding="utf-8")
     print(f"wrote {out_dir / 'index.html'} and {len(paths)} assets under {assets}")

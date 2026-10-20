@@ -22,8 +22,9 @@ EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 # Current and former lab members (PubMed "Surname Initials").
 # A paper counts as lab-led when one of them is first or last author.
 LAB = {"Lutsik P", "Sarnataro A", "Ratto ML", "Rizdvanetskyi D", "Sacchetti G", "Mongardi C",
-       # alumni
-       "Roos N", "Tardieu N", "Kubalová K", "Jeong Y", "Kelly K", "Sollier E", "Chen MJ", "Moeed A"}
+       "Van Gijseghem J", "Moeed A",
+       # alumni (postdocs and PhD students)
+       "Jeong Y", "Chen MJ", "Kelly K", "Sollier E", "Mayakonda A", "Scherer M"}
 HIGHLIGHT = "Lutsik P"
 
 # DOI -> software tag shown next to the paper.
@@ -41,6 +42,7 @@ SOFTWARE = {
     "10.1093/bioinformatics/btae354": "figeno",
     "10.1038/s41596-020-0369-6": "DecompPipeline",
     "10.1158/2643-3230.BCD-24-0278": "Pyjacker",
+    "10.1093/nar/gkaf970": "Pipeline Olympics",
 }
 
 EXTRA = [

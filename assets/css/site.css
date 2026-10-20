@@ -1,0 +1,183 @@
+/* CCBE lab site — page shell on top of the Industry design system (industry.css).
+   Colors, fonts and spacing come from the Industry tokens; this file only adds layout. */
+@import url("header.css");
+
+body { font-size: 16px; line-height: 1.6; text-wrap: pretty; }
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent-800); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+/* Inner pages open straight into their content (no page-head). */
+.page-top { padding-top: clamp(36px, 5vw, 64px); }
+
+/* — page opening — */
+.page-head { padding: clamp(40px, 7vw, 88px) 0 clamp(28px, 4vw, 48px); }
+.kicker-row { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.kicker-row .rule { flex: 1; height: 1px; background: var(--color-divider); }
+.kicker {
+  font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--color-neutral-700);
+}
+.tag-outline.kicker { color: var(--color-accent-700); border-color: var(--color-accent); padding: 4px 10px; }
+.display {
+  font-size: clamp(40px, 6.4vw, 80px); line-height: 0.96; letter-spacing: -0.02em;
+  text-transform: uppercase; margin: 0; max-width: 15ch;
+}
+.lede {
+  font-size: clamp(18px, 2vw, 21px); line-height: 1.45; color: var(--color-neutral-800);
+  max-width: 680px; margin: 22px 0 0;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.actions .btn { padding: 10px 20px; font-size: 15px; text-decoration: none; }
+.btn-secondary { color: var(--color-text); }
+.btn-primary, .btn-primary:hover { color: var(--color-bg); }
+
+/* — sections — */
+.section { padding: 0 0 clamp(48px, 7vw, 88px); }
+.section-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-top: 1px solid var(--color-divider); padding-top: 14px; margin-bottom: 28px;
+}
+.section-head h2 { font-size: clamp(28px, 3.4vw, 36px); text-transform: uppercase; margin: 0; }
+.more {
+  display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.more .icon { transition: transform .15s; }
+.more:hover .icon { transform: translateX(3px); }
+
+/* — modular grid: equal cells separated by hairlines — */
+.cells {
+  display: grid; gap: 1px; background: var(--color-divider);
+  border: 1px solid var(--color-divider);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+.cell { background: var(--color-bg); padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 8px; }
+.cell .num {
+  font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.14em; color: var(--color-accent-700);
+}
+.cell h3 { font-size: 22px; text-transform: uppercase; margin: 0; }
+.cell p { font-size: 15px; color: var(--color-neutral-800); margin: 0; }
+
+/* — card grids (blueprint objects) — */
+.grid { display: grid; gap: 28px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); }
+.card { padding: 20px 20px 18px; gap: 8px; }
+.card-kicker { color: var(--color-accent-700); }
+.card-title { font-size: 21px; }
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a:hover { color: var(--color-accent-700); }
+.card-body { font-size: 14.5px; opacity: 1; color: var(--color-neutral-800); }
+.card-links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 6px; font-size: 14px; }
+.card-links a { display: inline-flex; align-items: center; gap: 5px; text-decoration: none; }
+.card-links a:hover { text-decoration: underline; }
+.card-links .icon { width: 14px; height: 14px; }
+.card-links span { overflow-wrap: anywhere; }
+
+/* — featured post — */
+.feature {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px); padding: clamp(20px, 3vw, 32px); align-items: center;
+}
+.feature { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+.feature figure { aspect-ratio: 4 / 3; }
+.feature figure a { display: block; width: 100%; height: 100%; }
+.feature figure img { width: 100%; height: 100%; object-fit: contain; }
+.feature h3 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1; text-transform: uppercase; margin: 6px 0 12px; }
+.feature h3 a { color: inherit; text-decoration: none; }
+.feature h3 a:hover { color: var(--color-accent-700); }
+.feature p { color: var(--color-neutral-800); }
+.meta-row {
+  display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 4px 0 18px;
+  font-size: 13.5px; color: var(--color-neutral-700);
+}
+@media (max-width: 760px) { .feature { grid-template-columns: 1fr; } }
+
+/* — publication list — */
+.pubs { list-style: none; margin: 0; padding: 0; }
+.pub {
+  display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 4px 20px;
+  padding: 16px 0; border-top: 1px solid color-mix(in srgb, var(--color-text) 9%, transparent);
+}
+.pub:first-child { border-top: 0; }
+.pub-year {
+  font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.08em; color: var(--color-neutral-600);
+  padding-top: 2px;
+}
+.pub-title { font-weight: 500; font-size: 16.5px; line-height: 1.4; color: var(--color-text); text-decoration: none; }
+.pub-title:hover { color: var(--color-accent-700); text-decoration: underline; }
+.pub-authors { font-size: 14px; color: var(--color-neutral-700); margin-top: 3px; }
+.pub-authors b { color: var(--color-text); font-weight: 600; }
+.pub-venue { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 6px; font-size: 14px; }
+.pub-venue em { color: var(--color-neutral-800); }
+.pub .tag { font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; }
+
+.year-block { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 0 24px; border-top: 1px solid var(--color-divider); }
+.year-block > h3 {
+  margin: 0; padding-top: 14px; font-size: 34px; color: var(--color-accent-700);
+  position: sticky; top: 72px; align-self: start;
+}
+.year-block .pub { grid-template-columns: minmax(0, 1fr); }
+.year-block .pub-year { display: none; }
+@media (max-width: 640px) {
+  .year-block { grid-template-columns: 1fr; }
+  .year-block > h3 { position: static; }
+}
+
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 24px; }
+.seg-opt { font-size: 14px; }
+/* "Lab-led" filter: pure CSS via the segmented control's radio state */
+body:has(#filter-led:checked) .pub:not([data-led]) { display: none; }
+body:has(#filter-led:checked) .year-block:not(:has(.pub[data-led])) { display: none; }
+
+/* — team — */
+.person { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; align-items: start; }
+.monogram {
+  width: 56px; height: 56px; display: grid; place-items: center;
+  border: 1px solid var(--color-accent); color: var(--color-accent-700); background: var(--color-accent-100);
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 21px; letter-spacing: 0.04em;
+}
+.person h3 { font-size: 21px; margin: 0; }
+.person .role { font-size: 14.5px; color: var(--color-neutral-800); margin: 2px 0 0; }
+.person .card-links { margin-top: 8px; }
+.pi { grid-template-columns: 96px minmax(0, 1fr); gap: 24px; }
+.pi .monogram { width: 96px; height: 96px; font-size: 34px; }
+.pi h3 { font-size: 30px; }
+
+/* — footer — */
+.site-footer { border-top: 1px solid var(--color-divider); padding: 40px 0 48px; font-size: 14.5px; }
+.footer-grid { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.site-footer h4 {
+  font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-neutral-700); margin-bottom: 10px;
+}
+.site-footer p { margin: 0 0 6px; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.site-footer .fine { margin-top: 32px; font-size: 13px; color: var(--color-neutral-600); }
+
+.prose { max-width: 720px; }
+.prose p { color: var(--color-neutral-800); }
+
+/* publications toolbar: filter + profile links on one row, count underneath */
+.toolbar { flex-direction: column; align-items: stretch; gap: 10px; }
+.toolbar-group { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.profiles { display: flex; flex-wrap: wrap; gap: 8px; }
+.profiles .btn { text-decoration: none; padding: 7px 14px; }
+
+/* — alumni table — */
+.table-scroll { overflow-x: auto; }
+.alumni { font-size: 15px; }
+.alumni td:first-child { font-weight: 500; white-space: nowrap; }
+.alumni td:last-child { color: var(--color-neutral-700); white-space: nowrap; }
+.alumni td { padding-block: 10px; }
+
+/* — software cards: Lucide icon tile next to the kicker — */
+.card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.tool-icon {
+  width: 40px; height: 40px; flex: none; display: grid; place-items: center;
+  border: 1px solid var(--color-accent-300); background: var(--color-accent-100);
+  color: var(--color-accent-700);
+}
+.tool-icon .icon { width: 22px; height: 22px; }

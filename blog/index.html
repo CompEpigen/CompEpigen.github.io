@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog · CCBE Lab</title>
+  <meta name="description" content="Explainers and news from the Computational Cancer Biology and Epigenomics lab at KU Leuven.">
+  <link rel="icon" href="../img/ccbe_mark.png">
+  <link rel="stylesheet" href="../assets/css/industry.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="../">
+          <img src="../img/ccbe_mark.png" alt="">
+          <span><span class="brand-name">CCBE Lab</span><span class="brand-sub">Computational Cancer Biology &amp; Epigenomics</span></span>
+        </a>
+        <div class="site-nav">
+          <a href="../">Home</a>
+          <a href="../publications/">Publications</a>
+          <a href="../team/">Team</a>
+          <a href="./" aria-current="page">Blog</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page-top">
+    <h1 class="sr-only">Blog</h1>
+
+    <!-- To add a post: put it in blog/<slug>/index.html and copy the <article> block below, newest first. -->
+    <section class="section" aria-label="Posts">
+      <article class="card blueprint feature">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figure><a href="syto/"><img src="syto/teaser.webp" width="1600" height="1200" alt="Sequenced DNA reads with methylated and unmethylated CpGs go into cell-type deconvolution, which predicts the cell-type mixture."></a></figure>
+        <div>
+          <div class="card-kicker">Paper explainer · 15 September 2026</div>
+          <h3><a href="syto/">Classifying a tissue sample one DNA fragment at a time</a></h3>
+          <p>Assigning a DNA fragment to its most likely cell of origin gets harder as the number of possible cell types grows. The solution turned out to be letting the model know when to remain unsure.</p>
+          <div class="meta-row"><span>Rizdvanetskyi, Roos, Lutsik</span><span>NeurIPS 2026 · main track</span></div>
+          <a class="more" href="syto/">Read the post <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Visit</h4>
+          <p>Department of Oncology<br>KU Leuven<br>Herestraat 49<br>3001 Leuven, Belgium</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Pavlo Lutsik<br>pavlo[dot]lutsik[at]kuleuven[dot]be</p>
+        </div>
+        <div>
+          <h4>Elsewhere</h4>
+          <ul>
+            <li><a href="https://github.com/CompEpigen">GitHub</a></li>
+            <li><a href="https://research.kuleuven.be/portal/en/unit/57033702?hl=en&amp;lang=en">KU Leuven research portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">Computational Cancer Biology and Epigenomics Lab · Department of Oncology, KU Leuven</p>
+    </div>
+  </footer>
+</body>
+</html>

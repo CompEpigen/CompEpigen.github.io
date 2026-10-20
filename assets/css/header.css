@@ -1,0 +1,58 @@
+/* CCBE lab site — shared header. Linked by every page, including blog posts
+   (which bring their own Industry stylesheet), so keep it to header rules only. */
+
+:root { color-scheme: light only; }
+html { scroll-padding-top: 88px; }
+.wrap {
+  max-width: 1240px; margin: 0 auto;
+  padding-inline: clamp(16px, 5vw, 64px);
+}
+.icon {
+  width: 16px; height: 16px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.5;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* — header — */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-divider);
+}
+.site-header .nav { padding: 12px 0; gap: var(--space-6); flex-wrap: wrap; row-gap: 8px; }
+.brand {
+  display: flex; align-items: center; gap: 12px; margin-right: auto;
+  text-decoration: none; color: var(--color-text);
+}
+.brand:hover { color: var(--color-text); }
+.brand img { width: 38px; height: 38px; }
+.brand-name {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 20px; line-height: 1; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.brand-sub {
+  display: block; margin-top: 3px;
+  font-family: var(--font-heading); font-size: 12.5px; line-height: 1.1;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-neutral-700);
+}
+.site-nav { display: flex; gap: clamp(14px, 3vw, 30px); }
+.site-nav a {
+  position: relative; padding: 6px 0;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.site-nav a[aria-current='page']::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -13px;
+  height: 2px; background: var(--color-accent);
+}
+@media (max-width: 640px) {
+  .brand-sub { display: none; }
+  .site-nav { width: 100%; justify-content: space-between; }
+  .site-nav a[aria-current='page']::after { bottom: -9px; }
+}
+/* Blog posts: align the header with the post's own left margin. */
+.site-header--post .wrap {
+  max-width: 1240px; margin: 0;
+  padding-left: clamp(20px, 7vw, 120px); padding-right: clamp(20px, 5vw, 64px);
+}

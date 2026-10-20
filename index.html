@@ -1,244 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computational Cancer Biology and Epigenomics Lab</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
-    <style>
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            font-size: 10px
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-areas:
-                "sidebar topbar"
-                "sidebar main";
-            grid-template-columns: 250px 1fr;
-            grid-template-rows: auto 1fr;
-            height: 100vh;
-            box-sizing: border-box;
-            background: #fff;
-        }
-        .topbar {
-            grid-area: topbar;
-            background: #173e73;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            font-size: 1.5em;
-        }
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            grid-area: sidebar;
-            padding: 20px;
-            background: #d8e6f2;
-            border-right: 1px solid #ddd;
-        }
-        .main {
-            grid-area: main;
-            display: grid;
-            grid-template-areas: 
-                "research team software"
-                "publications positions other";
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 10px;
-            padding: 10px;
-            overflow: auto;
-        }
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .logo img {
-            height: 150px;
-            margin-right: 10px;
-        }
-        section {
-            padding: 0.25em;
-            background: none;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-        .research {
-            grid-area: research;
-        }
-        .team {
-            grid-area: team;
-        }
-        .publications {
-            grid-area: publications;
-        }
-        .software {
-            grid-area: software;
-        }
-        .funding {
-            grid-area: funding;
-        }
-        .contact-details {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .contact-details h2 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            font-family: 'Open Sans', Arial, sans-serif;
-        }
-        .contact-details p {
-            font-size: 0.9em;
-            line-height: 1.5;
-            text-align: left;
-        }
-        .other {
-            grid-area: other;
-        }
-        h2 {
-            margin-bottom: 0.5em;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            background: none;
-            padding: 2px;
-            margin-bottom: 2px;
-            border: none;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #004099;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        a:visited {
-            color: #0055aa;
-        }
-        a:active {
-            color: #003366;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computational Cancer Biology and Epigenomics Lab · KU Leuven</title>
+  <meta name="description" content="The Computational Cancer Biology and Epigenomics (CCBE) lab at KU Leuven develops computational methods to read cell identity from the epigenome.">
+  <link rel="icon" href="img/ccbe_mark.png">
+  <link rel="stylesheet" href="assets/css/industry.css">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <div class="topbar">
-        <h1>Computational Cancer Biology and Epigenomics Lab</h1>
-    </div>
-    <div class="sidebar">
-        <div class="logo">
-            <img src="img/ccbe_logo_upd.png" alt="Lab Logo">
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="./">
+          <img src="img/ccbe_mark.png" alt="">
+          <span><span class="brand-name">CCBE Lab</span><span class="brand-sub">Computational Cancer Biology &amp; Epigenomics</span></span>
+        </a>
+        <div class="site-nav">
+          <a href="./" aria-current="page">Home</a>
+          <a href="publications/">Publications</a>
+          <a href="team/">Team</a>
+          <a href="blog/">Blog</a>
         </div>
-        <div class="contact-details">
-                <p>
-                <b>Department of Oncology</b></br>
-                KU Leuven</br>
-                Herestraat 49</br>
-                3001 Leuven
-                </p>
-                <p>Contact: </br>pavlo[dot]lutsik[at]kuleuven[dot]be</p>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="page-head">
+      <div class="kicker-row">
+        <span class="tag tag-outline kicker">KU Leuven · Department of Oncology</span>
+        <span class="rule"></span>
+      </div>
+      <h1 class="display">Computational Cancer Biology and Epigenomics</h1>
+      <p class="lede">We develop computational methods that read cell identity from the epigenome: which cells make up a tissue or a tumour, where a cancer came from, and how individual cells differ.</p>
+      <div class="actions">
+        <a class="btn btn-primary blueprint" href="blog/syto/"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Read our latest post</a>
+        <a class="btn btn-secondary" href="publications/">Publications</a>
+      </div>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-h">
+      <div class="section-head"><h2 id="research-h">Research foci</h2></div>
+      <div class="cells">
+        <div class="cell">
+          <span class="num">01</span>
+          <h3>Methylome deconvolution</h3>
+          <p>Estimating the cell-type composition of DNA methylation data, from aggregated profiles down to individual sequencing reads, with and without reference panels.</p>
         </div>
+        <div class="cell">
+          <span class="num">02</span>
+          <h3>Cancer cell-of-origin inference</h3>
+          <p>Using the epigenetic memory carried by tumour cells to trace cancers back to the normal cell types they arose from.</p>
+        </div>
+        <div class="cell">
+          <span class="num">03</span>
+          <h3>Single-cell and spatial epigenomics</h3>
+          <p>Quantifying epigenetic heterogeneity and integrating multiomic measurements in single cells and tissues.</p>
+        </div>
+        <div class="cell">
+          <span class="num">04</span>
+          <h3>Oncohistone malignancies</h3>
+          <p>How mutations in histone genes, such as H3.3-G34W in giant cell tumours of bone, rewire the epigenetic landscape.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="latest" aria-labelledby="latest-h">
+      <div class="section-head">
+        <h2 id="latest-h">From the blog</h2>
+        <a class="more" href="blog/">All posts <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <article class="card blueprint feature">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figure><a href="blog/syto/"><img src="blog/syto/teaser.webp" width="1600" height="1200" alt="Sequenced DNA reads with methylated and unmethylated CpGs go into cell-type deconvolution, which predicts the cell-type mixture."></a></figure>
+        <div>
+          <div class="card-kicker">Paper explainer · 15 September 2026</div>
+          <h3><a href="blog/syto/">Classifying a tissue sample one DNA fragment at a time</a></h3>
+          <p>Assigning a DNA fragment to its most likely cell of origin gets harder as the number of possible cell types grows. The solution turned out to be letting the model know when to remain unsure.</p>
+          <div class="meta-row"><span>Rizdvanetskyi, Roos, Lutsik</span><span>NeurIPS 2026 · main track</span></div>
+          <a class="more" href="blog/syto/">Read the post <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="software" aria-labelledby="software-h">
+      <div class="section-head">
+        <h2 id="software-h">Software</h2>
+        <a class="more" href="https://github.com/CompEpigen">CompEpigen on GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+      </div>
+      <div class="grid">
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z" /><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /></svg></span>
+            <div class="card-kicker">Methylome deconvolution</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/CompEpigen/syto">Syto</a></div>
+          <p class="card-body">Read-level DNA methylation classification and cell-type deconvolution with deep learning, built on data-driven soft labels.</p>
+          <div class="card-links"><a href="https://github.com/CompEpigen/syto">Code</a><a href="https://arxiv.org/abs/2607.04987">Paper</a><a href="blog/syto/">Blog post</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="9" r="7" /><circle cx="15" cy="15" r="7" /></svg></span>
+            <div class="card-kicker">Methylome deconvolution</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/CompEpigen/MeDeCom">MeDeCom</a></div>
+          <p class="card-body">Reference-free discovery and quantification of latent components in heterogeneous methylomes.</p>
+          <div class="card-links"><a href="https://github.com/CompEpigen/MeDeCom">Code</a><a href="https://doi.org/10.1186/s13059-017-1182-6">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /><path d="M9 13a4.5 4.5 0 0 0 3-4" /><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /><path d="M3.477 10.896a4 4 0 0 1 .585-.396" /><path d="M6 18a4 4 0 0 1-1.967-.516" /><path d="M12 13h4" /><path d="M12 18h6a2 2 0 0 1 2 2v1" /><path d="M12 8h8" /><path d="M16 8V5a2 2 0 0 1 2-2" /><circle cx="16" cy="13" r=".5" /><circle cx="18" cy="3" r=".5" /><circle cx="20" cy="21" r=".5" /><circle cx="20" cy="8" r=".5" /></svg></span>
+            <div class="card-kicker">Methylome deconvolution</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/CompEpigen/methylbert">MethylBERT</a></div>
+          <p class="card-body">Read-level DNA methylation pattern identification and tumour deconvolution with a Transformer model.</p>
+          <div class="card-links"><a href="https://github.com/CompEpigen/methylbert">Code</a><a href="https://doi.org/10.1038/s41467-025-55920-z">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="m10 16 1.5 1.5" /><path d="m14 8-1.5-1.5" /><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993" /><path d="m16.5 10.5 1 1" /><path d="m17 6-2.891-2.891" /><path d="M2 15c6.667-6 13.333 0 20-6" /><path d="m20 9 .891.891" /><path d="M3.109 14.109 4 15" /><path d="m6.5 12.5 1 1" /><path d="m7 18 2.891 2.891" /><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993" /></svg></span>
+            <div class="card-kicker">Methylation analysis</div>
+          </div>
+          <div class="card-title"><a href="https://rnbeads.org/">RnBeads</a></div>
+          <p class="card-body">Comprehensive analysis of DNA methylation data, from array and sequencing data to reports.</p>
+          <div class="card-links"><a href="https://rnbeads.org/">Website</a><a href="https://doi.org/10.1186/s13059-019-1664-9">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M3 15h18" /><path d="M9 3v18" /><path d="M15 3v18" /></svg></span>
+            <div class="card-kicker">Methylation analysis</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/CompEpigen/methrix">methrix</a></div>
+          <p class="card-body">R/Bioconductor package for systematic aggregation and analysis of bisulfite sequencing data.</p>
+          <div class="card-links"><a href="https://github.com/CompEpigen/methrix">Code</a><a href="methrix/">Docs</a><a href="https://doi.org/10.1093/bioinformatics/btaa1048">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /><circle cx="12" cy="12" r="3" /><path d="m16 16-1.9-1.9" /></svg></span>
+            <div class="card-kicker">Methylation analysis</div>
+          </div>
+          <div class="card-title"><a href="https://www.bocklab.org/biq-analyzer-ht-details/">BiQ Analyzer HT / HiMod</a></div>
+          <p class="card-body">Locus-specific analysis of DNA methylation and its oxidised forms from high-throughput bisulfite sequencing.</p>
+          <div class="card-links"><a href="https://www.bocklab.org/biq-analyzer-ht-details/">Website</a><a href="https://doi.org/10.1093/nar/gkr312">HT paper</a><a href="https://doi.org/10.1093/nar/gku457">HiMod paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" /><path d="m14.5 12.5 2-2" /><path d="m11.5 9.5 2-2" /><path d="m8.5 6.5 2-2" /><path d="m17.5 15.5 2-2" /></svg></span>
+            <div class="card-kicker">Methylation analysis</div>
+          </div>
+          <div class="card-title"><a href="https://amplicondesign.dkfz.de">AmpliconDesign</a></div>
+          <p class="card-body">Interactive web server for designing high-throughput targeted DNA methylation assays.</p>
+          <div class="card-links"><a href="https://amplicondesign.dkfz.de">Web server</a><a href="https://doi.org/10.1080/15592294.2020.1834921">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="m8 6 4-4 4 4" /><path d="M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22" /><path d="m20 22-5-5" /></svg></span>
+            <div class="card-kicker">Single-cell epigenomics</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/BIMSBbioinfo/scmaui">scMAUI</a></div>
+          <p class="card-body">Deep learning framework for single-cell multiomics integration in the presence of batch effects and missing data.</p>
+          <div class="card-links"><a href="https://github.com/BIMSBbioinfo/scmaui">Code</a><a href="https://doi.org/10.1186/s12859-024-05880-w">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r=".5" fill="currentColor" /><circle cx="18.5" cy="5.5" r=".5" fill="currentColor" /><circle cx="11.5" cy="11.5" r=".5" fill="currentColor" /><circle cx="7.5" cy="16.5" r=".5" fill="currentColor" /><circle cx="17.5" cy="14.5" r=".5" fill="currentColor" /><path d="M3 3v16a2 2 0 0 0 2 2h16" /></svg></span>
+            <div class="card-kicker">Single-cell epigenomics</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/CompEpigen/epiCHAOS">epiCHAOS</a></div>
+          <p class="card-body">A metric to quantify epigenomic heterogeneity in single-cell data.</p>
+          <div class="card-links"><a href="https://github.com/CompEpigen/epiCHAOS">Code</a><a href="https://doi.org/10.1186/s13059-024-03446-w">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="m19 9-5 5-4-4-3 3" /></svg></span>
+            <div class="card-kicker">General tools</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/CompEpigen/figeno">figeno</a></div>
+          <p class="card-body">Multi-region genomic figures with long-read support.</p>
+          <div class="card-links"><a href="https://github.com/CompEpigen/figeno">Code</a><a href="https://doi.org/10.1093/bioinformatics/btae354">Paper</a></div>
+        </div>
+        <div class="card blueprint">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-head">
+            <span class="tool-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2" /><path d="M7 11v4a2 2 0 0 0 2 2h4" /><rect width="8" height="8" x="13" y="13" rx="2" /></svg></span>
+            <div class="card-kicker">General tools</div>
+          </div>
+          <div class="card-title"><a href="https://github.com/workflux/workflux">workflUX</a></div>
+          <p class="card-body">A web interface for configuring, running and monitoring Common Workflow Language (CWL) workflows.</p>
+          <div class="card-links"><a href="https://github.com/workflux/workflux">Code</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recent" aria-labelledby="recent-h">
+      <div class="section-head">
+        <h2 id="recent-h">Recent publications</h2>
+        <a class="more" href="publications/">All publications <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <!-- RECENT-PUBLICATIONS:START -->
+      <ol class="pubs">
+        <li class="pub" data-led>
+          <span class="pub-year">2026</span>
+          <div>
+            <a class="pub-title" href="https://arxiv.org/abs/2607.04987">Data-driven soft labeling scales DNA read classification to whole-body cell-type deconvolution.</a>
+            <div class="pub-authors">Rizdvanetskyi D, Roos N, <b>Lutsik P</b></div>
+            <div class="pub-venue"><em>NeurIPS 2026 (main track)</em><span class="tag tag-accent">Syto</span><a href="blog/syto/">Blog post</a></div>
+          </div>
+        </li>
+        <li class="pub" data-led>
+          <span class="pub-year">2025</span>
+          <div>
+            <a class="pub-title" href="https://doi.org/10.1093/nar/gkaf970">Pipeline Olympics: continuable benchmarking of computational workflows for DNA methylation sequencing data against an experimental gold standard.</a>
+            <div class="pub-authors">Lin YY, Breuer K, Weichenhan D … <b>Lutsik P</b></div>
+            <div class="pub-venue"><em>Nucleic Acids Res</em></div>
+          </div>
+        </li>
+        <li class="pub" data-led>
+          <span class="pub-year">2025</span>
+          <div>
+            <a class="pub-title" href="https://doi.org/10.1038/d41586-025-02256-9">Epigenetic clues from cancer&#x27;s past foretell its future.</a>
+            <div class="pub-authors"><b>Lutsik P</b>, Manojlovic V, Vassiliou GS</div>
+            <div class="pub-venue"><em>Nature</em><span class="tag tag-outline">Commentary</span></div>
+          </div>
+        </li>
+        <li class="pub" data-led>
+          <span class="pub-year">2025</span>
+          <div>
+            <a class="pub-title" href="https://doi.org/10.1158/2643-3230.BCD-24-0278">Enhancer Hijacking Discovery in Acute Myeloid Leukemia by Pyjacker Identifies MNX1 Activation via Deletion 7q.</a>
+            <div class="pub-authors">Sollier E, Riedel A, Toprak UH … <b>Lutsik P</b> … Plass C</div>
+            <div class="pub-venue"><em>Blood Cancer Discov</em><span class="tag tag-accent">Pyjacker</span></div>
+          </div>
+        </li>
+        <li class="pub" data-led>
+          <span class="pub-year">2025</span>
+          <div>
+            <a class="pub-title" href="https://doi.org/10.1038/s41467-025-55920-z">MethylBERT enables read-level DNA methylation pattern identification and tumour deconvolution using a Transformer-based model.</a>
+            <div class="pub-authors">Jeong Y, Gerhäuser C, Sauter G, Schlomm T, Rohr K, <b>Lutsik P</b></div>
+            <div class="pub-venue"><em>Nat Commun</em><span class="tag tag-accent">MethylBERT</span></div>
+          </div>
+        </li>
+      </ol>
+      <!-- RECENT-PUBLICATIONS:END -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h4>Visit</h4>
+          <p>Department of Oncology<br>KU Leuven<br>Herestraat 49<br>3001 Leuven, Belgium</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Pavlo Lutsik<br>pavlo[dot]lutsik[at]kuleuven[dot]be</p>
+        </div>
+        <div>
+          <h4>Elsewhere</h4>
+          <ul>
+            <li><a href="https://github.com/CompEpigen">GitHub</a></li>
+            <li><a href="https://research.kuleuven.be/portal/en/unit/57033702?hl=en&amp;lang=en">KU Leuven research portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">Computational Cancer Biology and Epigenomics Lab · Department of Oncology, KU Leuven</p>
     </div>
-
-    <div class="main">
-        <section id="research" class="research">
-            <h2>Research foci</h2>
-            <ul>
-                <li>Methylome deconvolution</li>
-                <li>Cancer cell-of-origin inference</li>
-                <li>Single-cell and spatial epigenomics</li>
-                <li>Oncohistone malignancies</li>
-            </ul>
-        </section>
-
-        <section id="team" class="team">
-            <h2>Team</h2>
-            <ul>
-                <li><a href="https://www.kuleuven.be/wieiswie/en/person/00153916">Pavlo Lutsik</a> &nbsp;&nbsp; PI</li>
-                <li><b>KU Leuven</b></li>
-                <ul>
-                    <li><a href="https://www.kuleuven.be/wieiswie/en/person/00169053">Antonella Sarnataro</a>  &nbsp;&nbsp; Postdoc</li>
-                    <li><a href="https://www.kuleuven.be/wieiswie/en/person/00160638">Guillaume Sacchetti</a> &nbsp;&nbsp; PhD student</li>
-                    <li><a href="https://www.kuleuven.be/wieiswie/en/person/00033628">Joke Delsupehe</a> &nbsp;&nbsp; administrative assistant</li>
-                </ul>
-                <li><b>German Cancer Research Center (DKFZ)</b></li>
-                <ul>
-                    <li><a href="https://www.dkfz.de/en/CanEpi/staff/Jeong.html"> Yunhee Jeong </a> &nbsp;&nbsp; Postdoc, CancerTRAX Fellow</li>
-                    <li><a href="https://www.dkfz.de/en/CanEpi/staff/May.html"> Mei-Ju Chen </a> &nbsp;&nbsp; Postdoc, joint with Plass lab</li>
-                    <li><a href="https://www.dkfz.de/en/CanEpi/staff/Kelly_Katherine.html"> Katherine Kelly </a>&nbsp;&nbsp; PhD Student, joint with Plass lab</li>
-                    <li><a href="https://www.dkfz.de/en/CanEpi/staff/Sollier_Etienne.html"> Etienne Sollier </a> &nbsp;&nbsp; PhD Student, joint with Plass lab</li>
-                    <li><a href="https://abdulmoeed.net"> Abdul Moeed </a> &nbsp;&nbsp; PhD student, joint with Stegle lab</li>
-                </ul>
-            </ul>
-        </section>
-        
-        <section id="software" class="software">
-            <h2>Software</h2>
-            <ul>
-                
-                <li><b>DNA methylome deconvolution</b></li>
-                <li>
-                    <a href="http:/github.com/CompEpigen/MeDeCom">MeDeCom</a> &nbsp;&nbsp;
-                    <a href="http:/github.com/CompEpigen/methylbert">MethylBERT</a>
-                </li>
-                <li></li>
-                <li><b>DNA methylation data analysis</b></li>
-                <li>
-                    <a href="https://rnbeads.org/">RnBeads</a>  &nbsp;&nbsp;
-                    <a href="https://www.bocklab.org/biq-analyzer-ht-details/">BiQ Analyzer HT/HiMod</a> <br>
-                    <a href="https://github.com/CompEpigen/methrix">methrix</a> &nbsp;&nbsp;
-                    <a href="https://amplicondesign.dkfz.de">AmpliconDesign</a>
-                </li>
-                <li></li>
-                <li><b>Single-cell epigenomics</b></li>
-                <li>
-                     <a href="https://github.com/BIMSBbioinfo/scmaui">scMAUI</a> &nbsp;&nbsp;
-                     <a href="https://github.com/CompEpigen/epiCHAOS">epiCHAOS</a>
-                </li>
-                <li></li>
-                <li><b>General bioinformatic tools</b></li>
-                <li>
-                    <a href="https://github.com/workflux/workflux">workflUX</a> &nbsp;&nbsp;
-                    <a href="https://github.com/CompEpigen/figeno">figeno</a>
-                </li>        
-            </ul>
-        </section>
-        
-        <section id="publications" class="publications">
-            <h2>Publications</h2>
-            <ul>
-                <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=%28Lutsik+P%5BAuthor%5D+AND+German+Cancer+Research+Center%5BAffiliation%5D%29+OR+%28Lutsik+P%5BAuthor%5D+AND+KU+Leuven%5BAffiliation%5D%29&sort=date">
-                    Pubmed</a></li>
-                <li><a href="https://scholar.google.com/citations?user=PB9nc_0AAAAJ&hl=de">Google Scholar</a></li>
-                <li><a href="http://lirias.kuleuven.be/cv?Username=u0153916">KU Leuven Lirias</a></li>
-            </ul>
-        </section>
-
-        <section id="positions" class="Positions">
-            <h2>Positions</h2>
-            <ul>
-                <a href="https://academicpositions.com/ad/ku-leuven/2024/phd-student-in-single-cell-multiomics-of-skeletal-stem-cells/222551">
-                    PhD Student</a> in single-cell multiomics of skeletal stem cells
-            </ul>
-        </section>
-
-        <section id="other" class="other">
-            <h2>Links</h2>
-            <ul>
-                <li>KU Leuven <a href="https://research.kuleuven.be/portal/en/unit/57033702?hl=en&lang=en">research portal</a></li>
-                <li>KU Leuven <a href="https://www.kuleuven.be/wieiswie/en/unit/regional/57033702">organisational chart</a></li>
-                <li>DKFZ group <a href="https://www.dkfz.de/en/CanEpi/CompEpigen/index.html">page</a></li>
-                <li>Alumni</li>
-            </ul>
-        </section>
-    </div>
+  </footer>
 </body>
 </html>

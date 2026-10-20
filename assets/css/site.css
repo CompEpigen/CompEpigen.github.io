@@ -189,3 +189,7 @@ body:has(#filter-led:checked) .year-block:not(:has(.pub[data-led])) { display: n
   color: var(--color-accent-700); margin: 0 0 8px;
 }
 .alumni td:not(:first-child):not(:last-child) { color: var(--color-neutral-800); }
+
+/* KU Leuven logo: official colours, never recoloured */
+.footer-logo { display: inline-block; margin-bottom: 28px; }
+.footer-logo img { height: 40px; width: auto; }

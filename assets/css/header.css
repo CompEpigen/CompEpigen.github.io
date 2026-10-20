@@ -51,8 +51,3 @@ html { scroll-padding-top: 88px; }
   .site-nav { width: 100%; justify-content: space-between; }
   .site-nav a[aria-current='page']::after { bottom: -9px; }
 }
-/* Blog posts: align the header with the post's own left margin. */
-.site-header--post .wrap {
-  max-width: 1240px; margin: 0;
-  padding-left: clamp(20px, 7vw, 120px); padding-right: clamp(20px, 5vw, 64px);
-}

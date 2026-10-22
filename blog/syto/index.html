@@ -494,6 +494,8 @@ textarea.input { min-height: 90px; resize: vertical; }
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px;">
       <a href="https://arxiv.org/abs/2607.04987" class="btn btn-primary blueprint" style="text-decoration: none; padding: 10px 20px;"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Read the paper</a>
+      <a href="https://github.com/CompEpigen/syto" class="btn btn-secondary" style="text-decoration: none; padding: 10px 20px;">Code</a>
+      <a href="https://huggingface.co/datasets/CompEpigen/syto.1.0" class="btn btn-secondary" style="text-decoration: none; padding: 10px 20px;">Models &amp; data</a>
       <a href="https://compepigen.github.io/" class="btn btn-secondary" style="text-decoration: none; padding: 10px 20px;">More from the lab</a>
     </div>
   </header><div style="max-width: 780px;">
@@ -531,14 +533,17 @@ textarea.input { min-height: 90px; resize: vertical; }
         <div style="display: flex; flex-direction: column; gap: 4px;">
           <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-700);">BOX 01&nbsp;</span>
           <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 23px; line-height: 1.1; margin: 0; text-transform: uppercase;">THE CENTRAL DOGMA OF MOLECULAR BIOLOGY&nbsp;</h3>
-          <span style="font-size: 14.5px; line-height: 1.5; color: var(--color-neutral-700);">How information flows from DNA to metabolites and what methods are used to read those signals<br></span>
+          <span style="font-size: 14.5px; line-height: 1.5; color: var(--color-neutral-700);">How information flows from DNA to protein, what happens downstream, and how each layer is measured</span>
         </div>
         <button type="button" sc-camel-on-click="{{ toggleOmics }}" class="btn btn-secondary" style="font-size: 13px; white-space: nowrap;">{{ omicsBtn }}</button>
       </div>
       <sc-if value="{{ omicsOpen }}" hint-placeholder-val="{{ false }}">
       <div style="border-top: 1px solid var(--color-divider); padding: 22px; display: flex; flex-direction: column; gap: 18px;">
-        <div style="margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--color-neutral-800);"><div style="margin-top: 0.5em; margin-bottom: 0.5em;">Despite its somewhat religious name, the central dogma of biology is based on empirical evidence of how genetic information encodes life and is, in fact, very simple, and can be summarized in a short sentence: DNA makes RNA, which makes protein. Proteins, many of them enzymes, produce metabolites as byproducts of their work that can be measured with corresponding methods.&nbsp;</div></div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider);">
+        <div style="margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--color-neutral-800);"><div style="margin-top: 0.5em; margin-bottom: 0.5em;">Despite its somewhat religious name, the central dogma of biology is based on empirical evidence of how genetic information encodes life and is, in fact, very simple, and can be summarized in a short sentence: DNA makes RNA, which makes protein. Metabolites sit downstream of the dogma: proteins, many of them enzymes, produce and transform them as they work, and they can be measured with corresponding methods.</div></div>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        <div style="flex: 3 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-700);">Central dogma</span>
+        <div style="flex: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider);">
           <div style="background: var(--color-bg); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;">
             <span style="font-family: var(--font-heading); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-600);">Source</span>
             <span style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 1; text-transform: uppercase;">DNA</span>
@@ -563,18 +568,25 @@ textarea.input { min-height: 90px; resize: vertical; }
             <span style="font-size: 13.5px; line-height: 1.45; color: var(--color-neutral-700);">The structural and enzymatic machinery of the cell.</span>
             <span style="font-size: 13px; line-height: 1.4; color: var(--color-neutral-700); padding-top: 6px; margin-top: auto; border-top: 1px solid var(--color-divider);">Example Assay: mass spectrometry</span>
           </div>
+        </div>
+        </div>
+        <div style="flex: 1 1 170px; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-family: var(--font-heading); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-700);">Downstream of the dogma</span>
+        <div style="flex: 1; display: grid; border: 1px dashed var(--color-neutral-400);">
           <div style="background: var(--color-bg); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;">
             <span style="font-family: var(--font-heading); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-600);">→ via enzymes</span>
-            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 1; text-transform: uppercase;">Metabolites</span>
-            <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700);">Metabolomics</span>
+            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 1; text-transform: uppercase;">Metabolites &amp; lipids</span>
+            <span style="font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700);">Metabolomics · Lipidomics</span>
             <span style="font-size: 14px; line-height: 1.45; color: var(--color-neutral-900);">What proteins leave behind as they work.</span>
-            <span style="font-size: 13.5px; line-height: 1.45; color: var(--color-neutral-700);">Sugars, lipids, amino acids and other small molecules.</span>
-            <span style="font-size: 13px; line-height: 1.4; color: var(--color-neutral-700); padding-top: 6px; margin-top: auto; border-top: 1px solid var(--color-divider);">Example Assay:&nbsp; nuclear magnetic resonance (NMR) spectrometry</span>
+            <span style="font-size: 13.5px; line-height: 1.45; color: var(--color-neutral-700);">Sugars, amino acids and other small molecules; lipids, the membrane and signaling layer, are profiled separately by lipidomics.</span>
+            <span style="font-size: 13px; line-height: 1.4; color: var(--color-neutral-700); padding-top: 6px; margin-top: auto; border-top: 1px solid var(--color-divider);">Example Assays: nuclear magnetic resonance (NMR) spectroscopy, liquid chromatography–mass spectrometry (LC-MS)</span>
           </div>
+        </div>
+        </div>
         </div>
         <div style="display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 16px; padding: 14px 16px; background: var(--color-accent-100); border: 1px solid var(--color-accent-300);">
           <span style="font-family: var(--font-heading); font-weight: 600; font-size: 17px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-accent-900);">Epigenomics</span>
-          <span style="font-size: 14px; line-height: 1.5; color: var(--color-accent-900);"><div style="margin-top: 0.5em; margin-bottom: 0.5em;">Sits on the genome layer and targets DNA methylation, histone modifications, and chromatin accessibility. Assays include WGS with bisulfite conversion (WGBS), nanopore sequencing, ChIP-seq, ATAC-seq, and many others. In our paper, we rely on WGBS methylation data for training, but in principle, <span style="font-style: italic;">Syto </span>can work with different epigenetic signals with necessary adaptations ranging from none to moderate.</div></span>
+          <span style="font-size: 14px; line-height: 1.5; color: var(--color-accent-900);"><div style="margin-top: 0.5em; margin-bottom: 0.5em;">Sits on the genome layer and targets DNA methylation, histone modifications, and chromatin accessibility. Assays include WGS with bisulfite conversion (WGBS), nanopore sequencing, ChIP-seq, ATAC-seq, and many others. In our paper, we rely on WGBS methylation data for training, but in principle, <span style="font-style: italic;"><span style="font-style: normal;">our proposed framework&nbsp;</span></span>can work with different epigenetic signals with necessary adaptations ranging from none to moderate.</div></span>
         </div>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--color-neutral-800);">Further down the chain, signals change faster and vary more between cells of the same type. DNA is also the most chemically stable of the four molecules, which is why fragments of it survive in blood plasma.</p>
       </div>
